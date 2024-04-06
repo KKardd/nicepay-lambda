@@ -1,0 +1,22 @@
+org: kkardd
+app: aws-node-http-api-project
+service: aws-node-http-api-project
+frameworkVersion: "3"
+
+provider:
+    name: aws
+    runtime: nodejs18.x
+
+functions:
+    index:
+        handler: src/index.handler
+        events:
+            - httpApi:
+                  path: /
+                  method: get
+    pay:
+        handler: src/pay.handler
+        events:
+            - pay:
+                  path: /pay
+                  method: get
