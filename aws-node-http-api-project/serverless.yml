@@ -17,6 +17,6 @@ functions:
     pay:
         handler: src/pay.handler
         events:
-            - pay:
+            - httpApi:
                   path: /pay
                   method: get
