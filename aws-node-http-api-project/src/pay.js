@@ -1,13 +1,7 @@
-module.exports.handler = async (event) => {
-    return {
-        statusCode: 200,
-        body: JSON.stringify(
-            {
-                message: "pay",
-                input: event,
-            },
-            null,
-            2
-        ),
-    };
-};
+"use strict";
+
+export async function pay(event) {
+    console.log(event);
+    console.log(process.env.TEST);
+    return JSON.parse(event.body);
+}
