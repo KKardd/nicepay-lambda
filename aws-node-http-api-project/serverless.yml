@@ -8,6 +8,10 @@ plugins:
 
 useDotenv: true
 
+custom:
+    serverlessPluginTypescript:
+        tsConfigFileLocation: "./tsconfig.build.json"
+
 provider:
     name: aws
     runtime: nodejs18.x
