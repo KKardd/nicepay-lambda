@@ -17,6 +17,5 @@
         "serverless-dotenv-plugin": "^6.0.0",
         "serverless-plugin-typescript": "^2.1.5",
         "typescript": "^5.4.4"
-    },
-    "type": "module"
+    }
 }
