@@ -2,6 +2,11 @@ org: kkardd
 app: aws-node-http-api-project
 service: aws-node-http-api-project
 frameworkVersion: "3"
+plugins:
+    - serverless-dotenv-plugin
+    - serverless-plugin-typescript
+
+useDotenv: true
 
 provider:
     name: aws
@@ -15,8 +20,8 @@ functions:
                   path: /
                   method: get
     pay:
-        handler: src/pay.handler
+        handler: src/pay.pay
         events:
             - httpApi:
                   path: /pay
-                  method: get
+                  method: post
