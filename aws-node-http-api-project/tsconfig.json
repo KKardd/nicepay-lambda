@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "preserveConstEnums": true,
+        "strictNullChecks": true,
+        "sourceMap": true,
+        "allowJs": true,
+        "target": "ES2021",
+        "outDir": "./dist",
+        "baseUrl": "./",
+        "moduleResolution": "node",
+        "lib": ["es2015"],
+        "rootDir": "./"
+    }
+}
