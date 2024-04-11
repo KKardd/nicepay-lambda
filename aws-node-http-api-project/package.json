@@ -10,7 +10,9 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@types/serverless": "^3.12.22"
+        "@types/serverless": "^3.12.22",
+        "mysql2": "^3.9.4",
+        "sequelize": "^6.37.2"
     },
     "devDependencies": {
         "dotenv": "^16.4.5",
