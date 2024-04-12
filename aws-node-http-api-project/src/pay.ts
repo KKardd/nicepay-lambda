@@ -1,5 +1,21 @@
+import {Dialect, Sequelize} from "sequelize";
+
+const dbType: Dialect = process.env.DATABASE_TYPE as Dialect;
+const dbHost: string = process.env.DATABASE_HOST!;
+const dbUsername: string = process.env.DATABASE_USERNAME!;
+const dbPassword: string = process.env.DATABASE_PASSWORD!;
+const dbName: string = process.env.DATABASE_NAME!;
+
+const sequelize = new Sequelize(dbName, dbUsername, dbPassword, {
+    host: dbHost,
+    dialect: dbType,
+    dialectOptions: {
+        ssl: {
+            rejectUnauthorized: true,
+        },
+    },
+});
+
 export async function pay(event) {
-    console.log(event);
-    console.log(process.env.TEST);
-    return JSON.parse(event.body);
+    return await sequelize.query("SELECT * FROM users;");
 }
