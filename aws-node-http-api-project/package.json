@@ -10,7 +10,9 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@types/axios": "^0.14.0",
         "@types/serverless": "^3.12.22",
+        "axios": "^1.6.8",
         "mysql2": "^3.9.4",
         "sequelize": "^6.37.2"
     },
