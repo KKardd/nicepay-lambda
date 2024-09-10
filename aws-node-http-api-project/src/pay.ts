@@ -8,15 +8,15 @@ const dbPassword: string = process.env.DATABASE_PASSWORD!;
 const dbName: string = process.env.DATABASE_NAME!;
 const testURL: string = process.env.TEST_URL!;
 
-const sequelize = new Sequelize(dbName, dbUsername, dbPassword, {
-    host: dbHost,
-    dialect: dbType,
-    dialectOptions: {
-        ssl: {
-            rejectUnauthorized: true,
-        },
-    },
-});
+// const sequelize = new Sequelize(dbName, dbUsername, dbPassword, {
+//     host: dbHost,
+//     dialect: dbType,
+//     dialectOptions: {
+//         ssl: {
+//             rejectUnauthorized: true,
+//         },
+//     },
+// });
 
 export async function pay(event) {
     const axiosData = await axios({
